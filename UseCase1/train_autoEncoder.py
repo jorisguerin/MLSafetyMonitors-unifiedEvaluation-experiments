@@ -57,7 +57,7 @@ lr_schedule = schedules.ExponentialDecay(
 AE.compile(optimizer=Adam(learning_rate=lr_schedule),
            loss=MeanSquaredError())
 
-history = AE.fit(X_train, X_train, epochs=2, shuffle=True,
+history = AE.fit(X_train, X_train, epochs=100, shuffle=True,
                  validation_data=(X_test, X_test))
 
 AE_path = "./Models/auto_encoder"

@@ -54,7 +54,7 @@ classifier.compile(optimizer=Adam(learning_rate=lr_schedule),
                    loss=SparseCategoricalCrossentropy(from_logits=True),
                    metrics=['accuracy'])
 
-history = classifier.fit(X_train, y_train, epochs=2,
+history = classifier.fit(X_train, y_train, epochs=100,
                          validation_data=(X_test, y_test))
 
 test_loss, test_acc = classifier.evaluate(X_test,  y_test, verbose=2)
