@@ -11,6 +11,10 @@ testDataBright_path = "Data/test_bright.p"
 (X_test, y_test) = pickle.load(open(testData_path, "rb"))
 (X_test_bright, _) = pickle.load(open(testDataBright_path, "rb"))
 
+X_train = X_train / 255.0
+X_test = X_test / 255.0
+X_test_bright = X_test_bright / 255.0
+
 classifier_encoder_path = "Models/classifier_encoder"
 AE_encoder_path = "Models/AE_encoder"
 
